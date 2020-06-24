@@ -42,21 +42,22 @@ class Quiz extends Component {
           disabled={this.props.questionId===1 ? true : false} onClick={()=>this.props.back()} >
             Pervious
           </button> 
+          
+          <button 
+          style={{color: 'Red', padding: '5px', borderRadius: '15px',marginRight: '5px'}}
+          onClick={()=>this.props.submit()}>
+            Submit Answer
+          </button>
           <button
           style={{color: 'blue', padding: '5px', borderRadius: '15px',marginRight: '5px'}}
            disabled={this.props.questionId===this.props.questionTotal ? true : false} onClick={()=>this.props.next()}>
             Next
           </button>
           <button 
-          style={{color: 'Red', padding: '5px', borderRadius: '15px',marginRight: '5px'}}
-          onClick={()=>this.props.submit()}>
-            Submit
-          </button>
-          <button 
           style={{color: 'green', padding: '5px', borderRadius: '15px',marginRight: '5px'}}
           onClick={()=>this.props.showAnswer()}
           >
-            Show answer
+            Show Answer
           </button>
           </div>
         </div>
