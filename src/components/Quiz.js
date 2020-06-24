@@ -45,6 +45,7 @@ class Quiz extends Component {
           
           <button 
           style={{color: 'Red', padding: '5px', borderRadius: '15px',marginRight: '5px'}}
+          disabled={this.props.answer.length > 0 ? false : true}
           onClick={()=>this.props.submit()}>
             Submit Answer
           </button>

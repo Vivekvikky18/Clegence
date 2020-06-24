@@ -15,11 +15,14 @@ var quizQuestions = [
               type: "Sony",
               content: "South africa"
           },{
-            type: "Sony",
+            type: "abc",
             content: "West indies"
         }
       ],
-      correctAnswer: 'India'
+      correctAnswer: {
+        type: "Microsoft",
+        content: "India"
+        }
   },
   {
       id: 2,
@@ -37,11 +40,14 @@ var quizQuestions = [
               type: "Sony",
               content: "2020"
           },{
-            type: "Sony",
+            type: "abc",
             content: "2030"
         }
       ],
-      correctAnswer: '2020'
+      correctAnswer: {
+        type: "Nintendo",
+        content: "2010"
+    },
   },
   {
       id: 3,
@@ -59,11 +65,14 @@ var quizQuestions = [
               type: "Sony",
               content: "March"
           },{
-            type: "Sony",
+            type: "abc",
             content: "December"
         }
       ],
-      correctAnswer: 'March'
+      correctAnswer:  {
+        type: "Sony",
+        content: "March"
+    }
   },
   {
       id:4,
@@ -81,12 +90,15 @@ var quizQuestions = [
               type: "Sony",
               content: "Tennis player"
           },{
-            type: "Sony",
+            type: "abc",
             content: "Rugby player"
         },
 
       ],
-      correctAnswer: 'Football player'
+      correctAnswer:  {
+        type: "Microsoft",
+        content: "Football player"
+    },
   },
 ];
 

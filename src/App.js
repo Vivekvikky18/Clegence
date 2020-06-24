@@ -53,6 +53,9 @@ class App extends Component {
   }
 
   handleAnswerSelected(event) {
+    console.log(event.target.value)
+    console.log(event.currentTarget)
+    console.log(event.currentTarget.value)
     this.setUserAnswer(event.currentTarget.value);
 
     // if (this.state.questionId < quizQuestions.length) {
@@ -127,7 +130,15 @@ class App extends Component {
   submit = () => {
     // this.handleAnswerSelected();
     if (this.state.questionId < quizQuestions.length) {
+      let answer = quizQuestions.find(data=>data.id===this.state.questionId)
+    if(answer.correctAnswer.type===this.state.answer){
       setTimeout(() => this.setNextQuestion(), 300);
+
+      alert("Answer is correct")
+    }else{
+      alert("Answer is Wrong")
+    }
+     
     } else {
       setTimeout(() => this.setResults(this.getResults()), 300);
     }
@@ -136,7 +147,7 @@ class App extends Component {
   showAnswer = () =>{
     console.log(quizQuestions)
     let answer = quizQuestions.find(data=>data.id===this.state.questionId)
-    alert("Correct ansewer is" + answer.correctAnswer)
+    alert("Correct ansewer is" + answer.correctAnswer.content)
   }
  
   renderQuiz() {
