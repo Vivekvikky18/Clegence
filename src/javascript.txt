@@ -1,0 +1,17 @@
+let str = "Aaabccddda"
+
+let final = ""
+let result = ""
+for(let i=0; i<str.length; i++){
+let char = str.charAt(i);
+let char1 = str.charAt(i+1);
+
+if(char!==final){
+    result+=char;
+final=char1
+console.log("res",result)
+}
+
+}
+
+console.log(result)
