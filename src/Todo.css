@@ -1,0 +1,21 @@
+.Todo-task {
+position: relative;
+transition: opacity 0.4s linear;
+}
+
+
+.Todo-task .completed{
+    opacity: 0.5;
+}
+
+.Todo-task .completed:before{
+content: '';
+animation: strikeitem 0.5s ease-out 0s forwards;
+}
+
+@keyframes strikeitem {
+    to {
+        width: calc(100% + 1rem);
+    }
+}
+
